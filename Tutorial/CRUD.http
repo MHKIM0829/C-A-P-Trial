@@ -1,0 +1,49 @@
+
+### Basic Read
+GET http://localhost:4004/IFL/IFLT0001
+
+
+### Deep Create
+# POST http://localhost:4004/IFL/IFLT0001
+POST https://cap-sample-srv-interested-turtle.cfapps.eu10.hana.ondemand.com/IFL/IFLT0001
+Content-Type: application/json
+
+{
+    "FLOWCODE" : "BS001",
+    "FLOWCNT" : "001",
+    "DETAIL" : [
+        {
+            "FLOWCODE" : "BS001",
+            "FLOWCNT" : "001",
+            "FLOWIT" : "01"
+        }
+    ]
+}
+
+### Deep Read
+GET http://localhost:4004/IFL/IFLT0001(FLOWNO='FLOWNO',FLOWCODE='BS001',FLOWCNT='001')?$expand=DETAIL
+
+
+### Deep Update
+PUT http://localhost:4004/IFL/IFLT0001(FLOWNO='FLOWNO',FLOWCODE='BS001',FLOWCNT='001')
+Content-Type: application/json
+
+{
+    "FLOWCODE" : "BS001",
+    "FLOWCNT" : "001",
+    "DETAIL" : [
+        {
+            "FLOWCODE" : "BS001",
+            "FLOWCNT" : "001",
+            "FLOWIT" : "01"
+        }
+    ]
+}
+
+### Deep Delete
+DELETE http://localhost:4004/IFL/IFLT0001(FLOWNO='FLOWNO',FLOWCODE='BS001',FLOWCNT='001')
+
+
+
+
+

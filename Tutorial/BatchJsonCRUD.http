@@ -1,0 +1,183 @@
+
+### Basic Read
+GET http://localhost:4004/IFL/IFLT0001
+
+
+### Batch(JSON) - Deep Create 
+POST http://localhost:4004/IFL/$batch
+Content-Type: application/json
+
+{
+	"requests": [
+        {
+            "atomicityGroup": "group1",
+            "id": "id-001",
+            "method": "POST",
+            "url": "IFLT0001",
+            "headers": {
+                "content-type": "application/json; odata.metadata=minimal; odata.streaming=true"
+		    },
+            "body": {
+                "FLOWCODE" : "BS001",
+                "FLOWCNT" : "001",
+                "DETAIL" : [
+                    {
+                        "FLOWCODE" : "BS001",
+                        "FLOWCNT" : "001",
+                        "FLOWIT" : "01"
+                    }
+                ]
+            }
+            
+        },
+        {
+            "atomicityGroup": "group1",
+            "id": "id-002",
+            "method": "POST",
+            "url": "IFLT0001",
+            "headers": {
+                "content-type": "application/json; odata.metadata=minimal; odata.streaming=true"
+		    },
+            "body": {
+                "FLOWCODE" : "BS001",
+                "FLOWCNT" : "001",
+                "DETAIL" : [
+                    {
+                        "FLOWCODE" : "BS001",
+                        "FLOWCNT" : "001",
+                        "FLOWIT" : "01"
+                    }
+                ]
+            }
+            
+        },
+        {
+            "atomicityGroup": "group1",
+            "id": "id-003",
+            "method": "POST",
+            "url": "IFLT0001",
+            "headers": {
+                "content-type": "application/json; odata.metadata=minimal; odata.streaming=true"
+		    },
+            "body": {
+                "FLOWCODE" : "BS001",
+                "FLOWCNT" : "001",
+                "DETAIL" : [
+                    {
+                        "FLOWCODE" : "BS001",
+                        "FLOWCNT" : "001",
+                        "FLOWIT" : "01"
+                    }
+                ]
+            }
+            
+        }
+    ]
+}
+
+
+### Batch(JSON) - Deep Update 
+POST http://localhost:4004/IFL/$batch
+Content-Type: application/json
+
+{
+	"requests": [
+        {
+            "atomicityGroup": "group1",
+            "id": "id-001",
+            "method": "PATCH",
+            "url": "IFLT0001(FLOWNO='FLOWNO',FLOWCODE='BS001',FLOWCNT='001')",
+            "headers": {
+                "content-type": "application/json; odata.metadata=minimal; odata.streaming=true"
+		    },
+            "body": {
+                "FLOWCODE" : "BS001",
+                "FLOWCNT" : "001",
+                "DETAIL" : [
+                    {
+                        "FLOWCODE" : "BS001",
+                        "FLOWCNT" : "001",
+                        "FLOWIT" : "01"
+                    }
+                ]
+            }
+            
+        },
+        {
+            "atomicityGroup": "group1",
+            "id": "id-002",
+            "method": "PATCH",
+            "url": "IFLT0001(FLOWNO='FLOWNO',FLOWCODE='BS001',FLOWCNT='001')",
+            "headers": {
+                "content-type": "application/json; odata.metadata=minimal; odata.streaming=true"
+		    },
+            "body": {
+                "FLOWCODE" : "BS001",
+                "FLOWCNT" : "001",
+                "DETAIL" : [
+                    {
+                        "FLOWCODE" : "BS001",
+                        "FLOWCNT" : "001",
+                        "FLOWIT" : "01"
+                    }
+                ]
+            }
+            
+        },
+        {
+            "atomicityGroup": "group1",
+            "id": "id-003",
+            "method": "PATCH",
+            "url": "IFLT0001(FLOWNO='FLOWNO',FLOWCODE='BS001',FLOWCNT='001')",
+            "headers": {
+                "content-type": "application/json; odata.metadata=minimal; odata.streaming=true"
+		    },
+            "body": {
+                "FLOWCODE" : "BS001",
+                "FLOWCNT" : "001",
+                "DETAIL" : [
+                    {
+                        "FLOWCODE" : "BS001",
+                        "FLOWCNT" : "001",
+                        "FLOWIT" : "01"
+                    }
+                ]
+            }
+            
+        }
+    ]
+}
+
+
+### Batch(JSON) - Deep Delete
+POST http://localhost:4004/IFL/$batch
+Content-Type: application/json
+
+{
+	"requests": [
+        {
+            "atomicityGroup": "group1",
+            "id": "id-001",
+            "method": "DELETE",
+            "url": "IFLT0001(FLOWNO='1000000001',FLOWCODE='MH001',FLOWCNT='001')"
+        },
+        {
+            "atomicityGroup": "group1",
+            "id": "id-002",
+            "method": "DELETE",
+            "url": "IFLT0001(FLOWNO='1000000002',FLOWCODE='MH001',FLOWCNT='001')"
+        },
+        {
+            "atomicityGroup": "group1",
+            "id": "id-003",
+            "method": "DELETE",
+            "url": "IFLT0001(FLOWNO='1000000003',FLOWCODE='MH001',FLOWCNT='001')"
+        }
+    ]
+}
+
+
+
+
+
+
