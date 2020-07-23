@@ -22,7 +22,7 @@
 
 ## **1. CAP Template**
 실습을 위한 CAP Template을 제공합니다.
-[**HANA Sequence CAP Template Git**](https://github.com/MHKIM0829/rendez-cap-seq-before.git)
+[**HANA Sequence CAP Template Git**](https://github.com/MHKIM0829/rendez-cap-seq.git)
 
 
 ## **2. Create a HANA DB Sequence**
